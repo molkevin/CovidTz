@@ -7,12 +7,19 @@
             <p><img src="{{asset('img/magyar_egyenleg.png')}}" class="img-thumbnail" alt="grafikon" title="grafikon"/></p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-6 offset-3" >
-            <h3>Magyarországi adatok részletes megtekintése:</h3>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-md-6">
+                <h3>Magyarországi adatok részletes megtekintése:</h3>
+                <div class="col-3"></div>
         </div>
-        <div class="col-sm-12 align-content-center" >
-            <table class="col-sm-7 offset-3  table table-striped">
+        </div>
+
+    <div class="row">
+        <div class="col-md-3"></div>
+
+        <div class="col-sm-6 align-content-center" >
+            <table class="col-sm-4   table table-striped align-content-center">
                 <thead>
 
                 <tr>
@@ -28,11 +35,12 @@
                         <th scope="col">{{$adatokmagyar -> datum}}</th>
                         <th scope="col">{{$adatokmagyar -> import}}</th>
                         <th scope="col">{{$adatokmagyar -> export}}</th>
-                        <th scope="col">{{$adatokmagyar->import + $adatokmagyar->export}}</th>
+                        <th scope="col">{{$adatokmagyar->export - $adatokmagyar->import}}</th>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
+            <div class="col-sm-3"></div>
         </div>
     </div>
 </div>
